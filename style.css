@@ -1,0 +1,139 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: -webkit-linear-gradient(-45deg, #90f5b2, #589b7c); /* Got this styling example from some homework in CodeAcademy */
+}
+
+
+img{
+    display: block;
+    padding-top: 3em;
+    padding-bottom: -3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    padding-top: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    font-family: Georgia;
+    text-align: center;
+  }
+  h2 {
+    color: rgb(73, 70, 70);
+    font-size: 1em;
+    padding-top: 5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  h3 {
+    color: rgb(0, 0, 0);
+    font: size 1em;
+    padding-top:1em;
+    width: 100%;
+    font-family: Georgia;
+    text-align: center;
+    font-style: italic;
+  }
+
+  h4 {
+    color: rgb(0, 0, 0);
+    font: size 1em;
+    padding-top: -1em;
+    padding-bottom: 2em;
+    width: 100%;
+    font-family: Georgia;
+    text-align: center;
+    font-style: italic;
+  }
+
+  h5 {
+  color: rgb(73, 70, 70);
+  display: block;
+    padding-bottom: 3em;
+    padding-top: -1em;
+   margin-left: auto;
+   margin-right: auto;
+    width: 50%;
+  font-family: Arial;
+  text-align: center;
+}
+
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    padding: 1.75em;
+    width: 100%;
+    font-family: Arial;
+    text-align: left;
+    margin-bottom: -40px;
+    margin-top: -40px;
+}
+
+.graph {
+    width: 90%;
+    padding-top: 5em;
+    padding-right: 2em;
+    padding-left: 2em;
+    
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+.graph {
+    width: 90%;
+    padding-right: 2em; 
+    padding-left: 5em;
+}
+}
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+
+.graph {
+    width: 90%;
+    padding-right: 2em; 
+    padding-left: 6em;
+}
+}
